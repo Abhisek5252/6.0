@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --primary: #00ff95;
+    --accent: #ff00ff;
+    --bg-dark: #1a1a2e;
+    --text-light: #ffffff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid var(--primary);
+}
+
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeOut 3s forwards;
+}
+
+.game-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.wallet-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.balance-amounts {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out;
+}
+
+.splash-image {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px var(--primary);
+}
+
+.splash-title {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+    animation: neonBlink 1.5s infinite alternate;
+}
+
+@keyframes neonBlink {
+    from {
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+    }
+    to {
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary);
+        opacity: 0.8;
+    }
+}
+
+.splash-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-top: 10px;
+    text-shadow: 0 0 5px var(--accent);
+}
+
+.game-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 60px;
+}
+
+.wallet-info {
+    padding: 15px;
+}
+
+.balance-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+}
+
+.converter {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.converter input {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary);
+    color: white;
+    border-radius: 5px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.game-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--accent);
+}
+
+.bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid var(--primary);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-item.active {
+    color: var(--primary);
+}
+
+.coming-soon {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 0.6rem;
+    background: var(--accent);
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.game-header {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid var(--primary);
+}
+
+.wallet-info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.game-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: auto;
+}
+
+.daily-bonus {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--accent);
+    margin: auto;
+    max-width: 400px;
+}
+
+.streak-counter {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.wheel-game {
+    text-align: center;
+}
+
+.wheel-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+.game-footer {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid var(--primary);
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-button {
+    background: var(--primary);
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.game-button.primary {
+    background: var(--accent);
+    color: var(--text-light);
+}
+
+.game-button.accent {
+    background: var(--primary);
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.coin {
+    position: fixed;
+    font-size: 24px;
+    animation: fall 5s linear;
+    cursor: pointer;
+    z-index: 100;
+    user-select: none;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fall {
+    from { transform: translateY(-5vh) rotate(0deg); }
+    to { transform: translateY(105vh) rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .splash-title {
+        font-size: 1.8rem;
+    }
+    
+    .game-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    animation: neonBlink 1.5s infinite;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+.main-heading {
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    animation: neonBlink 2s infinite;
+}
+
+.wheel {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaVerse: A New Era</title>
+    <meta name="description" content="Join the next generation of virtual gaming and earning">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <img src="attached_assets/article23-1.webp" alt="MetaVerse" class="splash-image">
+        <h1 class="splash-title neon-text">MetaVerse: A New Era</h1>
+        <p class="splash-subtitle">The Future of Gaming is Here</p>
+    </div>
+
+    <!-- Main Game Area -->
+    <div class="game-container">
+        <!-- Main Content Area -->
+        <main class="game-content">
+            <!-- Professional Heading -->
+            <h1 class="main-title">MetaVerse: A New Era</h1>
+            
+            <!-- Daily Bonus Section -->
+            <div class="daily-bonus">
+                <h2 class="neon-text">🌟 Daily Bonus</h2>
+                <div class="streak-counter">
+                    Streak: <span id="streak-count">0</span> days
+                </div>
+                <button class="game-button accent" onclick="game.claimDaily()">
+                    Claim Reward
+                </button>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item" onclick="game.showSection('wallet')">
+                <span>💰</span>
+                Wallet
+            </div>
+            <div class="nav-item" onclick="game.showSection('games')">
+                <span>🎮</span>
+                Games
+            </div>
+            <div class="nav-item" onclick="game.showSection('airdrop')">
+                <span>🪂</span>
+                Airdrop
+                <span class="coming-soon">Soon</span>
+            </div>
+            <div class="nav-item" onclick="game.showSection('leaderboard')">
+                <span>🏆</span>
+                Rank
+            </div>
+            <div class="nav-item" onclick="game.showSection('tasks')">
+                <span>📋</span>
+                Tasks
+            </div>
+        </nav>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
